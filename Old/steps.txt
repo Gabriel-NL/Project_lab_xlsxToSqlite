@@ -1,0 +1,22 @@
+#Create Virtual enviroment
+python -m venv venv
+
+#Activating virtual enviroment
+.\venv\Scripts\activate
+
+#If exception "PSSecurityException+FullyQualifiedErrorId UnauthorizedAccess" happens
+
+Set-ExecutionPolicy RemoteSigned -Scope Process
+
+#Deactivate virtual enviroment
+Deactivate
+
+#Get requirements
+pip freeze >requirements.txt
+
+#Install dependencies 
+pip install pandas openpyxl sqlalchemy
+
+#Alternatively, use this
+pip install -r requirements.txt
+
