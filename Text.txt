@@ -1,0 +1,9 @@
+python -m venv venv
+
+.\venv\Scripts\activate
+
+Set-ExecutionPolicy RemoteSigned -Scope Process
+
+pip freeze > requirements.txt
+
+pip install -r requirements.txt
